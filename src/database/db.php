@@ -1,14 +1,18 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 function connectDB()
 {
-    $env = parse_ini_file('.env');
 
-    $host = $env['MYSQL_HOST'];
-    $user = $env['MYSQL_USER'];
-    $password = $env['MYSQL_PASSWORD'];
-    $database = $env['MYSQL_DATABASE'];
-    $port = $env['MYSQL_PORT'];
+    $host = $_ENV['MYSQL_HOST'];
+    $user = $_ENV['MYSQL_USER'];
+    $password = $_ENV['MYSQL_PASSWORD'];
+    $database = $_ENV['MYSQL_DATABASE'];
+    $port = $_ENV['MYSQL_PORT'];
 
     $conn = new mysqli($host, $user, $password, $database, $port);
 
