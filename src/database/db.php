@@ -1,8 +1,8 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 function connectDB()
@@ -17,7 +17,7 @@ function connectDB()
     $conn = new mysqli($host, $user, $password, $database, $port);
 
     if ($conn->connect_error) {
-        die("La connexion à la base de données a échoué : " . $conn->connect_error);
+        die("La connexion    la base de donn  es a   chou   : " . $conn->connect_error);
     }
 
     return $conn;
