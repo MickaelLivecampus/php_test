@@ -2,7 +2,7 @@
 
 function connectDB()
 {
-    $env = parse_ini_file('.env.local');
+    $env = parse_ini_file('.env');
 
     $host = $env['MYSQL_HOST'];
     $user = $env['MYSQL_USER'];
