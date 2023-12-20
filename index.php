@@ -72,8 +72,7 @@ if ($requestMethod === 'GET' && isset($_GET['sub']) && $_GET['sub'] === "true") 
                     <h2 class="text-info fw-light mb-5"><i class="fa fa-car"></i>&nbsp;Garage Train</h2>
                     <form method="GET">
                         <div class="form-group mb-3"><label class="form-label text-secondary">Email</label><input
-                                    class="form-control" type="text" required="" name="mail"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
+                                    class="form-control" type="text" required="" name="mail" inputmode="email"></div>
                         <div class="form-group mb-3"><label class="form-label text-secondary">Mot de passe</label><input
                                     class="form-control" type="password" name="pass" required=""></div>
                         <button class="btn btn-info mt-2" name="sub" type="submit" value="true">Connexion</button>
